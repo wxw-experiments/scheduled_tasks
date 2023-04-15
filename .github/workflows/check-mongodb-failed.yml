@@ -1,4 +1,4 @@
-name: Check MongoDB Server
+name: Check MongoDB Server Failed
 
 on:
   workflow_dispatch:
@@ -25,4 +25,4 @@ jobs:
       env:
         MONGODB_URI: ${{ secrets.MONGODB_URI }}
       run: |
-        python -c "import pymongo; client = pymongo.MongoClient('${{ secrets.MONGODB_URI_NOT_EXISTED }}'); client.server_info()"
+        python -c "import pymongo; client = pymongo.MongoClient('${{ secrets.MONGODB_URI_WRONG }}'); client.server_info()"
