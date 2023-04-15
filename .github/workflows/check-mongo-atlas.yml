@@ -3,7 +3,7 @@ name: Check MongoDB Server
 on:
   workflow_dispatch:
   schedule:
-    - cron: '*/5 * * * *'
+    - cron: '*/7 * * * *'
 
 jobs:
   check-mongodb:
